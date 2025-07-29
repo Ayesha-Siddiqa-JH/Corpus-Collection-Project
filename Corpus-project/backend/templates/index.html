@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Corpus Collection Engine</title>
+  <link rel='stylesheet' href='/static/css/style.css'>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+  <h1>Corpus Collection Engine</h1>
+
+  <!-- Text Submission Form -->
+  <form id='text-form'>
+    <label for='language'>Language:</label>
+    <input type='text' id='language' required>
+    <label for='text'>Sentence:</label>
+    <textarea id='text' required></textarea>
+    <button type='submit'>Submit Text</button>
+  </form>
+
+  <!-- Audio Upload Form -->
+  <form id='audio-form' enctype='multipart/form-data'>
+    <label for='audio-language'>Language:</label>
+    <input type='text' id='audio-language' name='language' required>
+    <label for='audio'>Upload Audio:</label>
+    <input type='file' id='audio' name='audio' accept='audio/*' required>
+    <button type='submit'>Submit Audio</button>
+  </form>
+
+  <!-- Image Upload Form -->
+  <form id='image-form' enctype='multipart/form-data'>
+    <label for='image-language'>Language:</label>
+    <input type='text' id='image-language' name='language' required>
+    <label for='caption'>Caption:</label>
+    <input type='text' id='caption' name='caption' required>
+    <label for='image'>Upload Image:</label>
+    <input type='file' id='image' name='image' accept='image/*' required>
+    <button type='submit'>Submit Image</button>
+  </form>
+
+  <div id='message'></div>
+
+  <script src='/static/js/script.js'></script>
+</body>
+</html>
